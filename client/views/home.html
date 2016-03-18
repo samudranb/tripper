@@ -1,0 +1,27 @@
+<template name="home">
+  <div class="container">
+    {{#if currentUser}}
+      {{>my_trips}}
+    {{else}}
+      {{>home_content}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="home_content">
+  <div class="text-center">
+    <h1>Hello Trippers!</h1>
+    <p>
+      Sign up (or sign in) to start creating your trippy trips!
+    </p>
+    <div class="row">
+      <div class="col s8 offset-s2 m6 offset-m3">
+        <div class="card">
+          <div class="card-content">
+          {{> atForm}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
